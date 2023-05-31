@@ -31,6 +31,7 @@ jobs:
 
       - name: 构建文档
         env:
+          GITHUB_TOKEN: ${{ secrets.ACTION_SECRET }}
           NODE_OPTIONS: --max_old_space_size=8192
         run: |-
           pnpm run docs:build
